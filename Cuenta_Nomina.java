@@ -1,8 +1,8 @@
 public class Cuenta_Nomina extends Cuenta{
     private int retiro;
 
-    public Cuenta_Nomina(int retiro, double saldo, int pin, int numtarjeta) {
-        super(saldo, pin, numtarjeta);
+    public Cuenta_Nomina(int retiro, double saldo, int pin, String divisa) {
+        super(saldo, pin,divisa);
         this.retiro = retiro;
     }
 

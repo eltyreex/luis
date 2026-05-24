@@ -4,11 +4,13 @@ public class Cuenta {
     private double saldo;
     private Vector<Tarjeta> tarjetas = new Vector<Tarjeta>(1, 1);
     public int contador;
-    private String divisa;
+   private  String divisa;
+    
 
-    public Cuenta(double saldo,int pin, int numtarjeta) {
+    public Cuenta(double saldo,int pin, String divisa) {
         this.saldo = saldo;
-        this.tarjetas.add(new Tarjeta(pin, numtarjeta));
+        this.divisa = divisa;
+        this.tarjetas.add(new Tarjeta(pin));
     }
     
 
@@ -35,7 +37,6 @@ public class Cuenta {
         }
        
     }
-    
     
     
   

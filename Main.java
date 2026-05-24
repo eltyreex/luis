@@ -2,7 +2,8 @@ import java.util.Vector;
 public class Main{
     static Vector<Cliente> clientes = new Vector<>(1, 1);
     public static void main(String[] args) {
-        clientes.add(new Cliente("pepe", 18, 1000, 1234, 1));
+        clientes.add(new Cliente("pepe", 18, 1000, 1234,"MXN"));
+        
         inicio(true);
     }
     public static void inicio(boolean bucle){

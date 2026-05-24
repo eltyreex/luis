@@ -5,10 +5,10 @@ public class Cliente {
     private int edad;
     public Cuenta cuenta;
     
-    public Cliente(String nombre, int edad, double saldo, int pin, int numCuenta) {
+    public Cliente(String nombre, int edad, double saldo, int pin, String divisa) {
         this.nombre = nombre;
         this.edad = edad;
-        this.cuenta = new Cuenta(saldo, pin, numCuenta);
+        this.cuenta = new Cuenta(saldo, pin,divisa);
     }
 
     public String getNombre() {

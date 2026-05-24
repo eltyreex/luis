@@ -53,7 +53,29 @@ public class Cajero{
     }
 
     public static void depositar(){
-        cliente.cuenta.AgregarSaldo(Inputs.inputDouble("¿Cuanto deseas depositar en la cuenta?"));
+        double montoIngresado = Inputs.inputDouble("¿Cuanto deseas depositar?");
+    
+    String menuDivisas = """
+                         Seleccione la divisa del deposito:
+                         1. Pesos Mexicanos (MXN)
+                         2. Dolares (USD)
+                         3. Euros (EUR)""";
+                         
+    int opcion = Inputs.inputInt(menuDivisas);
+    double monto = 0;
+
+    switch (opcion) {
+        case 1 -> monto = montoIngresado; 
+        case 2 -> monto = Divisas.pesoDolar(montoIngresado);
+        case 3 -> monto = Divisas.pesoEuro(montoIngresado); 
+        default -> {
+            System.out.println("Opcion no valida");
+            return;
+        }
+    }
+    cliente.cuenta.AgregarSaldo(monto);
+    System.out.println("Deposito exitoso.");
+        
     }
     public static void retirar(){
         cliente.cuenta.QuitarSaldo(Inputs.inputDouble("¿Cuanto deseas retirar de la cuenta?"));

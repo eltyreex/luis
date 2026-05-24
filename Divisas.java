@@ -9,12 +9,17 @@ public class Divisas {
     public void eleccionDivisas(){
 
     }
-    public double cambioDolar(double monto){
+    public static double pesoDolar(double monto){
        return monto *20;
     }
-    public double cambioEuro(double monto){
+    public static double pesoEuro(double monto){
        return monto *22;
     }    
-    
+    public static double Europeso(double monto){
+       return monto /22;
+    }
+    public static double Dolarpeso(double monto){
+       return monto /20;
+    }
     
 }

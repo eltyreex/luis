@@ -1,7 +1,7 @@
 public class Tarjeta {
     //no necesario una relacion de herencia
     private int pin;
-    private int numTarjeta  = (int)(Math.random()*16);
+    private int numTarjeta = (int)(Math.random() * 900000) + 100000;
     public Tarjeta(int pin) {
         this.pin = pin;
     }
@@ -15,9 +15,7 @@ public class Tarjeta {
         return numTarjeta;
     }
 
-    private void setNumTarjeta(int numTarjeta) {
-        this.numTarjeta = numTarjeta;
-    }
+    
     
     public boolean validarPin(int pin){
         boolean verificador;

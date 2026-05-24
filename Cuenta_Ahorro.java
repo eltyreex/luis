@@ -2,8 +2,8 @@ public class Cuenta_Ahorro extends Cuenta{
     private int meses;
     private int fechaInicio;
 
-    public Cuenta_Ahorro(int meses, int fechaInicio, double saldo, int pin, int numtarjeta) {
-        super(saldo, pin, numtarjeta);
+    public Cuenta_Ahorro(int meses, int fechaInicio, double saldo, int pin, String divisa) {
+        super(saldo, pin, divisa);
         this.meses = meses;
         this.fechaInicio = fechaInicio;
     }
